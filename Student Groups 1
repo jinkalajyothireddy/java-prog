@@ -1,0 +1,38 @@
+Accept total number of participants in class. A group of four divisions has to be created from registered participants. Total no of participants “P” 100>=p<=200 Note: If number of participants
+entered by user is less than 100 or greater than 200 display “INVALID INPUT” and quit.
+Input Format:
+Take number of students in a class
+Constraints:
+100>=p<=200
+Output Format:
+Print Stidents in group wise
+Sample Input 0:
+104
+Sample Output 0:
+26
+26
+26
+26
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int p=sc.nextInt();
+        if(p<100 || p>200)
+        {
+            System.out.println("INVALID INPUT");
+        }
+        else
+        {
+            int g=p/4;
+            System.out.printf("%d\n%d\n%d\n%d",g,g,g,g+p%4);
+        }
+    }
+}
